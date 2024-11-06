@@ -1,11 +1,12 @@
 services:
   backend:
     image: bootcamp-django:1.0.0
-    env_file:
-      - .env
+    container_name: backend
     build:
       context: .
       dockerfile: Dockerfile
+    env_file:
+      - .env
     ports:
       - "8000:8000"
     volumes:
@@ -15,6 +16,9 @@ services:
 
   db:
     image: postgres:17
+    container_name: db
+    ports:
+      - "5432:5432"
     restart: always
     env_file:
       - .env
