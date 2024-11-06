@@ -1,0 +1,15 @@
+- model: products.material
+  fields:
+    name: aluminio
+- model: products.material
+  fields:
+    name: acero inoxidable
+- model: products.material
+  fields:
+    name: acero galvanizado
+- model: products.material
+  fields:
+    name: acero al carbono
+- model: products.material
+  fields:
+    name: latón y cobre
