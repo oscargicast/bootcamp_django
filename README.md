@@ -4,6 +4,7 @@
 
 ```sh
 make setup
+make build
 ```
 
 ## Ejecutar migraciones
