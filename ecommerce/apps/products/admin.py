@@ -41,6 +41,7 @@ class ProductAdmin(admin.ModelAdmin):
         'price',
         'stock',
         'category',
+        'get_materials',
         'modified',
         'created',
     ]
@@ -60,3 +61,8 @@ class ProductAdmin(admin.ModelAdmin):
         'created',
         'modified',
     ]
+
+    def get_materials(self, obj):
+        return ', '.join([m.name for m in obj.materials.all()])
+
+    get_materials.short_description = 'Materials'

@@ -1,5 +1,7 @@
 Django==5.1.2
 PyYAML==6.0.2
+dj-database-url==2.3.0
 django-model-utils==5.0.0
+environs==11.0.0
 ipdb==0.13.13
 psycopg2-binary==2.9.7

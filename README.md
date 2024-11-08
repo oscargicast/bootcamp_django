@@ -1,9 +1,10 @@
-# Bootcamp Django - Sesión 2
+# Bootcamp Django - Sesión 3
 
 ## Setup
 
 ```sh
 make setup
+make build
 ```
 
 ## Ejecutar migraciones

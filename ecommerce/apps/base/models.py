@@ -1,9 +1,9 @@
-from model_utils.models import TimeStampedModel, UUIDModel
+from model_utils.models import TimeStampedModel, UUIDModel, SoftDeletableModel
 
 from apps.base.utils import camel_to_snake
 
 
-class BaseModel(UUIDModel, TimeStampedModel):
+class BaseModel(UUIDModel, TimeStampedModel, SoftDeletableModel):
     class Meta:
         abstract = True
         ordering = ['-created']
