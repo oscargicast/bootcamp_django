@@ -1,0 +1,180 @@
+# Categories
+- model: products.category
+  pk: 1e7d1e2e-1c3b-4b8e-9b1e-8e1e1e1e1e1e
+  fields:
+    name: Parrillas
+- model: products.category
+  pk: 2e7d2e2e-2c3b-4b8e-9b2e-8e2e2e2e2e2e
+  fields:
+    name: Mesas de Trabajo
+- model: products.category
+  pk: 3e7d3e3e-3c3b-4b8e-9b3e-8e3e3e3e3e3e
+  fields:
+    name: Accesorios Vehiculares
+- model: products.category
+  pk: 4e7d4e4e-4c3b-4b8e-9b4e-8e4e4e4e4e4e
+  fields:
+    name: Soportes
+
+# Materials
+- model: products.material
+  pk: c7395a3c-824e-4008-b88a-5ae1d732ae12
+  fields:
+    name: Acero - ASTM A36
+- model: products.material
+  pk: 5b258833-f343-4cd0-af64-9de5d61deb43
+  fields:
+    name: Acero - AISI 304
+- model: products.material
+  pk: 0a7e7a1c-75f4-43cf-850c-b500d44d53bf
+  fields:
+    name: Acero - 3003 H14
+- model: products.material
+  pk: 79d8f778-d0a5-47b7-aab3-368a3da39df9
+  fields:
+    name: Aluminio
+
+# Products
+- model: products.product
+  pk:
+  fields:
+    name: Parrila industrial a GAS
+    description: Parrilla industrial a gas con 4 quemadores
+    price: 1200.00
+    category: 1e7d1e2e-1c3b-4b8e-9b1e-8e1e1e1e1e1e
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+- model: products.product
+  pk:
+  fields:
+    name: Rack para bicicletas
+    description: Rack para bicicletas con capacidad para 4 bicicletas
+    price: 2000.00
+    category: 3e7d3e3e-3c3b-4b8e-9b3e-8e3e3e3e3e3e
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+
+# Thickness for Acero - ASTM A36
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 1.5
+    value_inch: "1/32"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 2.0
+    value_inch: "5/54"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 2.5
+    value_inch: "3/32"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 3.0
+    value_inch: "1/8"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 4.5
+    value_inch: "3/16"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 6.0
+    value_inch: "1/4"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 6.4
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 8.0
+    value_inch: "5/16"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 9.0
+    value_inch: "3/8"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 9.5
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 12.0
+    value_inch: "1/2"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 16.0
+    value_inch: "5/8"
+- model: products.thickness
+  fields:
+    material: c7395a3c-824e-4008-b88a-5ae1d732ae12
+    value_mm: 19.0
+    value_inch: "3/4"
+
+# Thickness for Acero - AISI 304
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 0.8
+    value_inch: "1/32"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 0.9
+    value_inch: "1/27"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 1.2
+    value_inch: "1/20"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 1.5
+    value_inch: "1/32"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 2.0
+    value_inch: "5/54"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 2.5
+    value_inch: "3/32"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 3.0
+    value_inch: "1/8"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 4.5
+    value_inch: "3/16"
+- model: products.thickness
+  fields:
+    material: 5b258833-f343-4cd0-af64-9de5d61deb43
+    value_mm: 6.0
+    value_inch: "1/4"
+
+# Thickness for Acero - 3003 H14
+- model: products.thickness
+  fields:
+    material: 0a7e7a1c-75f4-43cf-850c-b500d44d53bf
+    value_mm: 0.6
+- model: products.thickness
+  fields:
+    material: 0a7e7a1c-75f4-43cf-850c-b500d44d53bf
+    value_mm: 0.8
+    value_inch: "1/32"
+- model: products.thickness
+  fields:
+    material: 0a7e7a1c-75f4-43cf-850c-b500d44d53bf
+    value_mm: 1.0

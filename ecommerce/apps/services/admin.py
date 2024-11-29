@@ -15,12 +15,10 @@ class ServiceAdmin(admin.ModelAdmin):
         'material',
         'units',
         'total_price',
-        'status',
         'created',
     ]
     list_filter = [
         'material',
-        'status',
         'order__status',
     ]
     search_fields = [

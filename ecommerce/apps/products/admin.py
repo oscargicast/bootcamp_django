@@ -1,6 +1,12 @@
 from django.contrib import admin
 
-from apps.products.models import Material, Category, Product
+from apps.products.models import (
+    Material,
+    Thickness,
+    Category,
+    Product,
+    ProductLine,
+)
 
 
 @admin.register(Material)
@@ -12,6 +18,27 @@ class MaterialAdmin(admin.ModelAdmin):
         'created',
     ]
     search_fields = ['name']
+    readonly_fields = [
+        'created',
+        'modified',
+    ]
+
+
+@admin.register(Thickness)
+class ThicknessAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'material',
+        'value',
+        'modified',
+        'created',
+    ]
+    list_filter = [
+        'material',
+    ]
+    search_fields = [
+        'material__name',
+    ]
     readonly_fields = [
         'created',
         'modified',
@@ -39,30 +66,55 @@ class ProductAdmin(admin.ModelAdmin):
         'id',
         'name',
         'price',
-        'stock',
         'category',
-        'get_materials',
+        'material',
         'modified',
         'created',
     ]
     list_filter = [
         'category',
-        'materials',
+        'material',
     ]
     search_fields = ['name']
     autocomplete_fields = [
         'category',
-        'materials',
-    ]
-    filter_horizontal = [
-        'materials',
+        'material',
     ]
     readonly_fields = [
         'created',
         'modified',
     ]
 
-    def get_materials(self, obj):
-        return ', '.join([m.name for m in obj.materials.all()])
 
-    get_materials.short_description = 'Materials'
+@admin.register(ProductLine)
+class ProductLineAdmin(admin.ModelAdmin):
+    list_display = [
+        'id',
+        'order',
+        'product',
+        'units',
+        'unit_price',
+        'total_price',
+        'created',
+    ]
+    list_filter = [
+        'product',
+        'order__status',
+    ]
+    search_fields = [
+        'product__name',
+        'order__user__email',
+        'order__user__first_name',
+        'order__user__last_name',
+        'order__user__mobile',
+    ]
+    autocomplete_fields = [
+        'order',
+        'product',
+    ]
+    readonly_fields = [
+        'unit_price',
+        'total_price',
+        'created',
+        'modified',
+    ]

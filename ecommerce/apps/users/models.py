@@ -44,6 +44,7 @@ class User(BaseModel, AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         db_table = 'user'
+        ordering = ['-created']
 
     def __str__(self):
         return self.email

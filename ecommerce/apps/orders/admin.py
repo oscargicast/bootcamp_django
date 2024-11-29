@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Order, OrderLine
+from .models import Order
 
 
 @admin.register(Order)
@@ -8,7 +8,7 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = [
         'id',
         'user',
-        'total_discount',
+        'discount',
         'total_price',
         'status',
         'created',
@@ -28,40 +28,5 @@ class OrderAdmin(admin.ModelAdmin):
     readonly_fields = [
         'created',
         'modified',
-        'total_discount',
         'total_price',
-    ]
-
-
-@admin.register(OrderLine)
-class OrderLineAdmin(admin.ModelAdmin):
-    list_display = [
-        'id',
-        'order',
-        'product',
-        'units',
-        'unit_price',
-        'discount',
-        'total_price',
-        'created',
-    ]
-    list_filter = [
-        'product',
-        'order__status',
-    ]
-    search_fields = [
-        'product__name',
-        'order__user__email',
-        'order__user__first_name',
-        'order__user__last_name',
-        'order__user__mobile',
-    ]
-    autocomplete_fields = [
-        'order',
-        'product',
-    ]
-    readonly_fields = [
-        'total_price',
-        'created',
-        'modified',
     ]
