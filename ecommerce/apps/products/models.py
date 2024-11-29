@@ -19,6 +19,7 @@ class Thickness(BaseModel):
     material = models.ForeignKey(
         Material,
         on_delete=models.CASCADE,
+        related_name='thicknesses',
     )
 
     value_mm = models.DecimalField(
